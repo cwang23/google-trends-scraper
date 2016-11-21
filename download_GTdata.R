@@ -22,7 +22,7 @@ library(zoo)
 
 # login to Google account 
 # must be logged in to this account in browser for code to work
-GOOGLE_USER = "GOOGLE USERNAME (e.g. google@google.com"
+GOOGLE_USER = "GOOGLE USERNAME (e.g. google@google.com")
 GOOGLE_PASS = "GOOGLE PASSWORD"
 account <- gconnect(usr = GOOGLE_USER, psw = GOOGLE_PASS)
 
@@ -54,7 +54,6 @@ for(i in year){
                      start_date = as.Date(paste(i, substr(j, 1, 5), sep = "-")),
                      end_date = as.Date(paste(i, substr(j, 7, 11), sep = "-"))
                      )
-      #close()
       # subset for daily data and make into data frame
       dataframe <- as.data.frame(info$trend)
       # save data frame as CSV file
@@ -114,7 +113,7 @@ for(i in year){
 
 ## -------------------------------------< DOWNLOAD CALIFORNIA DAILY DATA >-----------------------------------------
 
-# can download daily data for a different date by changing the "geo" parameter (e.g. can download data for MA by inputting "US-MA")
+# can download daily data for a different area by changing the "geo" parameter (e.g. can download data for MA by inputting "US-MA")
 
 # search query1
 for(i in year){
